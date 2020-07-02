@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="LojaTDS">
+  <ClassDiagramComponents>
+    <Class name="ClienteFornecedorBD" package="lojatds.bancos" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="INSTANCE" type="ClienteFornecedorBD" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="ClientesFornecedores" type="List&lt;ClienteFornecedor&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+        <Constructor visibility="private">
+          <Argument type="ClienteFornecedorBD" name="a"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getINSTANCE" returnType="ClienteFornecedorBD" visibility="public" isStatic="true"/>
+        <Method name="cadastrar" returnType="boolean" visibility="public">
+          <Argument type="ClienteFornecedor" name="cf"/>
+        </Method>
+        <Method name="remover" returnType="ClienteFornecedor" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="buscar" returnType="ClienteFornecedor" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="clone" returnType="Object" visibility="public"/>
+        <Method name="listar" returnType="List&lt;ClienteFornecedor&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClientesBD" package="lojatds.bancos" visibility="public" xPosition="806.0" yPosition="168.0">
+      <Fields>
+        <Field name="INSTANCE" type="ClientesBD" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="clientes" type="List&lt;ClienteComprador&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+        <Constructor visibility="private">
+          <Argument type="ClientesBD" name="a"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getINSTANCE" returnType="ClientesBD" visibility="public" isStatic="true"/>
+        <Method name="cadastrar" returnType="boolean" visibility="public">
+          <Argument type="ClienteComprador" name="c"/>
+        </Method>
+        <Method name="remover" returnType="ClienteComprador" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="buscar" returnType="ClienteComprador" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="clone" returnType="Object" visibility="public"/>
+        <Method name="listar" returnType="List&lt;ClienteComprador&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClientesVIPBD" package="lojatds.bancos" visibility="public" xPosition="920.0" yPosition="20.0">
+      <Fields>
+        <Field name="INSTANCE" type="ClientesVIPBD" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="clientesvip" type="List&lt;ClienteVIP&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+        <Constructor visibility="private">
+          <Argument type="ClientesVIPBD" name="a"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getINSTANCE" returnType="ClientesVIPBD" visibility="public" isStatic="true"/>
+        <Method name="cadastrar" returnType="boolean" visibility="public">
+          <Argument type="ClienteVIP" name="cv"/>
+        </Method>
+        <Method name="remover" returnType="ClienteVIP" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="buscar" returnType="ClienteVIP" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="clone" returnType="Object" visibility="public"/>
+        <Method name="listar" returnType="List&lt;ClienteVIP&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ProdutosBD" package="lojatds.bancos" visibility="public" xPosition="1220.0" yPosition="20.0">
+      <Fields>
+        <Field name="INSTANCE" type="ProdutosBD" visibility="private" isStatic="true" isFinal="true"/>
+        <Field name="produtos" type="List&lt;Produto&gt;" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="private"/>
+        <Constructor visibility="private">
+          <Argument type="ProdutosBD" name="a"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getINSTANCE" returnType="ProdutosBD" visibility="public" isStatic="true"/>
+        <Method name="compra" returnType="float" visibility="public">
+          <Argument type="int" name="quant"/>
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="venda" returnType="float" visibility="public">
+          <Argument type="int" name="quant"/>
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="cadastrar" returnType="boolean" visibility="public">
+          <Argument type="Produto" name="p"/>
+        </Method>
+        <Method name="remover" returnType="Produto" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="buscar" returnType="Produto" visibility="public">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="clone" returnType="Object" visibility="public"/>
+        <Method name="listar" returnType="List&lt;Produto&gt;" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="LojaTDS" package="lojatds" visibility="public" xPosition="1520.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cliente" package="lojatds.modelo" visibility="public" isAbstract="true" xPosition="1820.0" yPosition="20.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="codigo" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="codigo"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Cliente" name="o"/>
+        </Method>
+        <Method name="clone" returnType="Object" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteComprador" package="lojatds.modelo" visibility="public" xPosition="2120.0" yPosition="20.0">
+      <Fields>
+        <Field name="CPF" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="CPF"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCPF" returnType="int" visibility="public"/>
+        <Method name="setCPF" returnType="void" visibility="public">
+          <Argument type="int" name="CPF"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteFornecedor" package="lojatds.modelo" visibility="public" xPosition="20.0" yPosition="420.0">
+      <Fields>
+        <Field name="CNPJ" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="CNPJ"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCNPJ" returnType="int" visibility="public"/>
+        <Method name="setCNPJ" returnType="void" visibility="public">
+          <Argument type="int" name="CNPJ"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="ClienteVIP" package="lojatds.modelo" visibility="public" xPosition="320.0" yPosition="420.0">
+      <Fields>
+        <Field name="tempo_Vip" type="int" visibility="private"/>
+        <Field name="desconto" type="double" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="CPF"/>
+          <Argument type="int" name="tempo_Vip"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getTempo_Vip" returnType="int" visibility="public"/>
+        <Method name="getDesconto" returnType="double" visibility="public"/>
+        <Method name="setTempo_Vip" returnType="void" visibility="public">
+          <Argument type="int" name="tempo_Vip"/>
+        </Method>
+        <Method name="setDesconto" returnType="void" visibility="public">
+          <Argument type="double" name="desconto"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Produto" package="lojatds.modelo" visibility="public" xPosition="620.0" yPosition="420.0">
+      <Fields>
+        <Field name="nome" type="String" visibility="private"/>
+        <Field name="quantidade" type="int" visibility="private"/>
+        <Field name="codigo" type="int" visibility="private"/>
+        <Field name="preco_de_compra" type="float" visibility="private"/>
+        <Field name="preco_de_venda" type="float" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nome"/>
+          <Argument type="int" name="codigo"/>
+          <Argument type="int" name="quantidade"/>
+          <Argument type="float" name="preco_de_compra"/>
+          <Argument type="float" name="preco_de_venda"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNome" returnType="String" visibility="public"/>
+        <Method name="setNome" returnType="void" visibility="public">
+          <Argument type="String" name="nome"/>
+        </Method>
+        <Method name="getQuantidade" returnType="int" visibility="public"/>
+        <Method name="setQuantidade" returnType="void" visibility="public">
+          <Argument type="int" name="quantidade"/>
+        </Method>
+        <Method name="getCodigo" returnType="int" visibility="public"/>
+        <Method name="setCodigo" returnType="void" visibility="public">
+          <Argument type="int" name="codigo"/>
+        </Method>
+        <Method name="getPreco_de_compra" returnType="float" visibility="public"/>
+        <Method name="setPreco_de_compra" returnType="void" visibility="public">
+          <Argument type="float" name="preco_de_compra"/>
+        </Method>
+        <Method name="getPreco_de_venda" returnType="float" visibility="public"/>
+        <Method name="setPreco_de_venda" returnType="void" visibility="public">
+          <Argument type="float" name="preco_de_venda"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="compareTo" returnType="int" visibility="public">
+          <Argument type="Produto" name="o"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Interface name="Banco" package="lojatds.bancos" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Methods>
+        <Method name="cadastrar" returnType="boolean" visibility="package">
+          <Argument type="B" name="b"/>
+        </Method>
+        <Method name="remover" returnType="B" visibility="package">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="buscar" returnType="B" visibility="package">
+          <Argument type="int" name="cod"/>
+        </Method>
+        <Method name="listar" returnType="List&lt;B&gt;" visibility="package"/>
+      </Methods>
+    </Interface>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <UseRelation source="lojatds.bancos.ClienteFornecedorBD" target="lojatds.modelo.ClienteFornecedor" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="clientes" source="lojatds.bancos.ClientesBD" target="lojatds.modelo.ClienteComprador" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ClienteComprador&gt;"/>
+    <HasRelation name="INSTANCE" source="lojatds.bancos.ClientesBD" target="lojatds.bancos.ClientesBD" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="ClientesFornecedores" source="lojatds.bancos.ClienteFornecedorBD" target="lojatds.modelo.ClienteFornecedor" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ClienteFornecedor&gt;"/>
+    <UseRelation source="lojatds.bancos.ProdutosBD" target="lojatds.modelo.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="lojatds.bancos.ClientesVIPBD" target="lojatds.bancos.Banco"/>
+    <HasRelation name="produtos" source="lojatds.bancos.ProdutosBD" target="lojatds.modelo.Produto" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;Produto&gt;"/>
+    <HasRelation name="INSTANCE" source="lojatds.bancos.ProdutosBD" target="lojatds.bancos.ProdutosBD" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="lojatds.bancos.ProdutosBD" target="lojatds.bancos.Banco"/>
+    <HasRelation name="clientesvip" source="lojatds.bancos.ClientesVIPBD" target="lojatds.modelo.ClienteVIP" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="List&lt;ClienteVIP&gt;"/>
+    <IsRelation name="is" source="lojatds.modelo.ClienteVIP" target="lojatds.modelo.ClienteComprador"/>
+    <UseRelation source="lojatds.bancos.ClientesVIPBD" target="lojatds.modelo.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lojatds.bancos.ClientesVIPBD" target="lojatds.modelo.ClienteVIP" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lojatds.modelo.Cliente" target="lojatds.modelo.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="lojatds.bancos.ClientesBD" target="lojatds.modelo.ClienteComprador" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <IsRelation name="is" source="lojatds.modelo.ClienteComprador" target="lojatds.modelo.Cliente"/>
+    <UseRelation source="lojatds.modelo.Produto" target="lojatds.modelo.Produto" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="lojatds.bancos.ClienteFornecedorBD" target="lojatds.bancos.Banco"/>
+    <UseRelation source="lojatds.bancos.ClientesBD" target="lojatds.modelo.Cliente" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <ImplementsRelation name="&lt;&lt;implements&gt;&gt;" source="lojatds.bancos.ClientesBD" target="lojatds.bancos.Banco"/>
+    <IsRelation name="is" source="lojatds.modelo.ClienteFornecedor" target="lojatds.modelo.Cliente"/>
+    <HasRelation name="INSTANCE" source="lojatds.bancos.ClientesVIPBD" target="lojatds.bancos.ClientesVIPBD" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="INSTANCE" source="lojatds.bancos.ClienteFornecedorBD" target="lojatds.bancos.ClienteFornecedorBD" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
